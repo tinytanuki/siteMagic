@@ -1,0 +1,120 @@
+
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Wishlist Magic: The Gathering</title>
+        <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style3.css">
+        <style>
+            /* Votre CSS ici */
+            #popup-img-container {
+                display: none; /* Caché par défaut */
+                position: fixed; /* Pour s'afficher par-dessus tout */
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.8); /* Fond sombre semi-transparent */
+                z-index: 1000; /* S'assurer qu'il est au-dessus des autres éléments */
+                justify-content: center;
+                align-items: center;
+            }
+            #popup-img {
+                max-width: 80%; /* Ajustez en fonction de la taille souhaitée */
+                max-height: 80%;
+            }
+        </style>
+        <script>
+            function openPopup(src) {
+                document.getElementById('popup-img').src = src;
+                document.getElementById('popup-img-container').style.display = 'flex';
+            }
+            function closePopup() {
+                document.getElementById('popup-img-container').style.display = 'none';
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Ma Wishlist Magic : The Gathering</h1>
+        <div class="cards-container">
+    
+        <div class="card">
+            <h2>Kodama de l'Arbre de l'Ouest</h2>
+            <img src='https://www.play-in.com/images/cartes/mtg_neo/imported_kodama_of_the_west_tree92607.png' alt='Kodama de l'Arbre de l'Ouest' onclick="openPopup('https://www.play-in.com/images/cartes/mtg_neo/imported_kodama_of_the_west_tree92607.png')"/>
+            <p>Edition : Kamigawa : la dynastie Néon<br>
+            <a href='https://www.play-in.com/magic/carte/44755-kodama_de_larbre_de_louest'>Voir sur Play-in</a><br>
+            Prix : 16,00 €</p>
+        </div>
+        
+        <div class="card">
+            <h2>Vigueur Primordiale</h2>
+            <img src='https://www.play-in.com/images/cartes/mtg_wot/imported_primal_vigor118869.png' alt='Vigueur Primordiale' onclick="openPopup('https://www.play-in.com/images/cartes/mtg_wot/imported_primal_vigor118869.png')"/>
+            <p>Edition : Les friches d'Eldraine : Enchanting Tales<br>
+            <a href='https://www.play-in.com/magic/carte/18126-1154-vigueur_primordiale'>Voir sur Play-in</a><br>
+            Prix : 6,50 €</p>
+        </div>
+        
+        <div class="card">
+            <h2>Chishiro, la Lame Brisée</h2>
+            <img src='https://www.play-in.com/images/cartes/mtg_nec/imported_chishiro_the_shattered_blade93275.png' alt='Chishiro, la Lame Brisée' onclick="openPopup('https://www.play-in.com/images/cartes/mtg_nec/imported_chishiro_the_shattered_blade93275.png')"/>
+            <p>Edition : Commander Kamigawa : la dynastie Néon<br>
+            <a href='https://www.play-in.com/magic/carte/45207-chishiro_la_lame_brisee'>Voir sur Play-in</a><br>
+            Prix : 1,00 €</p>
+        </div>
+        
+        <div class="card">
+            <h2>Halana et Alena, partenaires</h2>
+            <img src='https://www.play-in.com/images/cartes/mtg_vow/imported_halana_and_alena_partners89827.png' alt='Halana et Alena, partenaires' onclick="openPopup('https://www.play-in.com/images/cartes/mtg_vow/imported_halana_and_alena_partners89827.png')"/>
+            <p>Edition : Innistrad : Noce Écarlate<br>
+            <a href='https://www.play-in.com/magic/carte/44154-halana_et_alena_partenaires'>Voir sur Play-in</a><br>
+            Prix : 2,00 €</p>
+        </div>
+        
+        <div class="card">
+            <h2>Grumgully, le généreux</h2>
+            <img src='https://www.play-in.com/images/cartes/throne_of_eldraine/grumgully_the_generous.png' alt='Grumgully, le généreux' onclick="openPopup('https://www.play-in.com/images/cartes/throne_of_eldraine/grumgully_the_generous.png')"/>
+            <p>Edition : Le Trône d'Eldraine<br>
+            <a href='https://www.play-in.com/magic/carte/26960-grumgully_le_genereux'>Voir sur Play-in</a><br>
+            Prix : 0,35 €</p>
+        </div>
+        
+        <div class="card">
+            <h2>Écailles renforcées</h2>
+            <img src='https://www.play-in.com/images/cartes/mtg_wot/imported_hardened_scales118056.png' alt='Écailles renforcées' onclick="openPopup('https://www.play-in.com/images/cartes/mtg_wot/imported_hardened_scales118056.png')"/>
+            <p>Edition : Les friches d'Eldraine : Enchanting Tales<br>
+            <a href='https://www.play-in.com/magic/carte/18783-1154-Ecailles_renforcees'>Voir sur Play-in</a><br>
+            Prix : 3,00 €</p>
+        </div>
+        
+        <div class="card">
+            <h2>Saison de dédoublement</h2>
+            <img src='https://www.play-in.com/images/cartes/mtg_wot/imported_doubling_season117599.png' alt='Saison de dédoublement' onclick="openPopup('https://www.play-in.com/images/cartes/mtg_wot/imported_doubling_season117599.png')"/>
+            <p>Edition : Les friches d'Eldraine : Enchanting Tales<br>
+            <a href='https://www.play-in.com/magic/carte/6570-1154-saison_de_dedoublement'>Voir sur Play-in</a><br>
+            Prix : 35,00 €</p>
+        </div>
+        
+        <div class="card">
+            <h2>Rythme de la forêt</h2>
+            <img src='https://www.play-in.com/images/cartes/ravnica_allegiance/rhythm_of_the_wild.png' alt='Rythme de la forêt' onclick="openPopup('https://www.play-in.com/images/cartes/ravnica_allegiance/rhythm_of_the_wild.png')"/>
+            <p>Edition : L'allégeance de Ravnica<br>
+            <a href='https://www.play-in.com/magic/carte/25278-rythme_de_la_foret'>Voir sur Play-in</a><br>
+            Prix : 4,50 €</p>
+        </div>
+        
+        <div class="card">
+            <h2>Habitant de l'allée du Lierre</h2>
+            <img src='https://www.play-in.com/images/cartes/gatecrash/ivy_lane_denizen.jpg' alt='Habitant de l'allée du Lierre' onclick="openPopup('https://www.play-in.com/images/cartes/gatecrash/ivy_lane_denizen.jpg')"/>
+            <p>Edition : Insurrection<br>
+            <a href='https://www.play-in.com/magic/carte/17573-habitant_de_lallee_du_lierre'>Voir sur Play-in</a><br>
+            Prix : 0,50 €</p>
+        </div>
+        
+    </div>
+    <div id="popup-img-container" onclick="closePopup()">
+        <img id="popup-img" src="" alt="Image agrandie" />
+    </div>
+</body>
+</html>
+    
