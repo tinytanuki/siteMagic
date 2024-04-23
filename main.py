@@ -111,7 +111,7 @@ def update_csv_with_card_details_KO(input_csv_path, output_csv_path):
     df.to_csv(output_csv_path, index=False)
     print(f"CSV updated and saved to {output_csv_path}")
 
-def generate_html_file_from_Manabox(csv_path, deckname, decklist, html_filename="manabox.html", css_filename="style.css"):
+def generate_html_file_from_Manabox(csv_path, deckname, decklist, deck_icons, html_filename="manabox.html", css_filename="style.css"):
     '''
     :param csv_path:
     :param deckname:
@@ -125,8 +125,12 @@ def generate_html_file_from_Manabox(csv_path, deckname, decklist, html_filename=
     nav_menu_html = '<nav><ul>'
     nav_menu_html += '<li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>'  # Icône maison
 
-    for deck in decklist:
-        nav_menu_html += f'<li><a href="{deck}.html">{deck.capitalize()}</a></li>'  # Lien pour chaque deck
+    for i in range (len(decklist)):
+        deck = decklist[i]
+        deck_icon = deck_icons[i]
+        nav_menu_html += f"""
+        <li><a href="{deck}.html"><i class="{deck_icon}"></i> {deck.capitalize()}</a></li>
+        """  # Lien pour chaque deck
 
     nav_menu_html += '</ul></nav>'
     print(nav_menu_html)
@@ -137,7 +141,7 @@ def generate_html_file_from_Manabox(csv_path, deckname, decklist, html_filename=
     <head>
         <meta charset="UTF-8">
         <title>{deckname} - Collection Magic: The Gathering</title>
-        <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Cinzel&family=MedievalSharp&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{css_filename}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
         <style>
@@ -205,6 +209,8 @@ def generate_html_file_from_Manabox(csv_path, deckname, decklist, html_filename=
 
 # Chemin d'accès au CSV d'entrée et de sortie
 deck_names = ["Arahbo", "Brille-Paume", "Ajani protecteur valeureux", "Nissa artisane de la nature"]
+deck_icons = ["fas fa-cat", "fas fa-star", "fas fa-shield-alt", "fas fa-leaf"]
+
 for deck in deck_names :
     # Mise à jour du CSV
     csv_input_path = 'Decks/' + deck + '.csv'
@@ -212,4 +218,4 @@ for deck in deck_names :
     update_csv_with_card_details(csv_input_path, csv_output_path)
 
     # Génération du fichier HTML à partir du CSV mis à jour
-    generate_html_file_from_Manabox(csv_output_path, deck, deck_names, deck + ".html")
+    generate_html_file_from_Manabox(csv_output_path, deck, deck_names, deck_icons, deck + ".html")

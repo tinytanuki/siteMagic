@@ -2,14 +2,13 @@ body {
     background-image: url('afc4e1e2-6461-441a-b0dc-225058190e2e.webp'); /* URL de l'image de fond */
     background-size: cover;
     background-attachment: fixed;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Belleza', sans-serif;
     color: #f0f4f8; /* Couleur de texte pour la lisibilité */
     margin: 0;
     padding: 20px;
 }
 
 h1 {
-    font-family: 'Gochi Hand', cursive;
     color: #ffffff; /* Couleur blanche pour le titre */
     text-align: center;
     margin-bottom: 40px; /* Espacement sous le titre */
@@ -125,4 +124,58 @@ nav:after {
     nav ul li {
         float: none;
     }
+}
+
+h1, h2, h3, .menu {
+    font-family: 'Cinzel', serif;
+}
+
+.body-text {
+    font-family: 'Belleza', sans-serif;
+}
+
+.card-name, .card-details {
+    font-family: 'MedievalSharp', cursive;
+}
+
+/* Menu Styling */
+nav {
+    background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Cinzel', serif;
+    transition: color 0.3s ease;
+    /* vos styles existants */
+    border-radius: 10px; /* Ceci arrondira les coins. Ajustez la valeur selon vos besoins. */
+    transition: all 0.3s ease; /* Assure une transition douce pour le style de survol */
+}
+
+
+nav ul li a i {
+    margin-right: 8px;
+}
+
+
+nav ul li a:hover {
+    /* vos styles existants pour le survol */
+    background-color: rgba(255, 255, 255, 0.2); /* Ajoute un fond légèrement blanc pour le survol */
+    color: #f8c555; /* Or gold pour le survol */ /* Choisissez une couleur foncée pour plus de contraste */
+    border-radius: 10px; /* S'assurer que les bords arrondis restent cohérents */
+    padding: 14px 16px; /* Ajouter ou ajuster le padding si nécessaire pour l'effet de survol */
 }
