@@ -75,7 +75,7 @@ def generate_html_file_from_Manabox(csv_path, deckname, decklist, deck_icons, de
     df = pd.read_csv(csv_path)
     # Trier le DataFrame par la colonne 'Name' ou par la colonne appropriée contenant le nom des cartes
     df_sorted = df.sort_values(by='Name', ascending=True)
-    
+
     # Compter le nombre total de cartes et organiser par type
     total_cards = len(df)
     card_types = df['Name'].value_counts()  # Assurez-vous que vous avez une colonne 'Type' dans votre CSV
@@ -91,8 +91,6 @@ def generate_html_file_from_Manabox(csv_path, deckname, decklist, deck_icons, de
         deck_icon = deck_icons[i]
         nav_menu_html += f"""
         <li><a href="{deck}.html"><i class="{deck_icon}"></i> {deck.capitalize()}</a></li>"""
-    nav_menu_html += '</ul></nav>'
-
     nav_menu_html += '\n        </ul></nav>'
 
     # Obtenir les détails de la carte commandant
@@ -233,9 +231,9 @@ def generate_html_file_from_Manabox(csv_path, deckname, decklist, deck_icons, de
     print(f"Le fichier HTML {html_filename} a été généré avec succès.")
 
 # Chemin d'accès au CSV d'entrée et de sortie
-deck_names = ["Arahbo", "Brille-Paume", "Ajani protecteur valeureux", "Nissa artisane de la nature", "ManaBox_Collection"]
-deck_icons = ["fas fa-cat", "fas fa-star", "fas fa-shield-alt", "fas fa-leaf", "fas fa-book"]
-deck_commanders = ["Arahbo, Roar of the World", "Bright-Palm, Soul Awakener", "Ajani, Valiant Protector", "Nissa, Nature's Artisan", "None"]
+deck_names = ["Arahbo", "Brille-Paume", "Ajani protecteur valeureux", "Nissa artisane de la nature", "ManaBox_Collection", "Wishlist Arahbo", "Wishlist Brille-Paume"]
+deck_icons = ["fas fa-cat", "fas fa-star", "fas fa-shield-alt", "fas fa-leaf", "fas fa-book", "fas fa-star", "fas fa-star"]
+deck_commanders = ["Arahbo, Roar of the World", "Bright-Palm, Soul Awakener", "Ajani, Valiant Protector", "Nissa, Nature's Artisan", "None", "None", "None"]
 
 
 # Construction de la liste des dictionnaires
