@@ -14,6 +14,10 @@ h1 {
     margin-bottom: 40px; /* Espacement sous le titre */
 }
 
+h2 {
+    text-align: center;
+    margin-bottom: 20px; /* Espacement sous le titre */
+}
 .cards-container {
     display: flex;
     flex-wrap: wrap;
@@ -76,8 +80,12 @@ a:hover {
 
 /* Style de base pour la barre de navigation */
 nav {
-    background-color: #333; /* Couleur d'arrière-plan de la barre de navigation */
+    background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    padding: 10px;
+    border-radius: 5px;
     overflow: hidden;
+}
+nav {
 }
 
 /* Style pour les éléments de liste dans la barre de navigation */
@@ -85,12 +93,17 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
+
 
 /* Style pour les liens dans la barre de navigation */
 nav ul li {
     float: left;
+    margin: 0 10px;
 }
+
 
 nav ul li a {
     display: block;
@@ -98,12 +111,24 @@ nav ul li a {
     text-align: center;
     padding: 14px 16px; /* Espacement autour du texte */
     text-decoration: none;
+    font-family: 'Cinzel', serif;
+    transition: color 0.3s ease;
+    border-radius: 10px; /* Pour arrondir les coins */
+    transition: all 0.3s ease; /* Transition douce pour le style de survol */
 }
+
+
+nav ul li a i {
+    margin-right: 8px;
+}
+
 
 /* Changer la couleur des liens au survol */
 nav ul li a:hover {
-    background-color: #ddd;
-    color: black; /* Couleur du texte des liens au survol */
+    background-color: rgba(255, 255, 255, 0.2); /* Ajoute un fond légèrement blanc pour le survol */
+    color: #f8c555; /* Or gold pour le survol */
+    border-radius: 10px; /* S'assurer que les bords arrondis restent cohérents */
+    padding: 14px 16px; /* Ajouter ou ajuster le padding si nécessaire pour l'effet de survol */
 }
 
 /* Style pour l'icône de la maison (home) */
@@ -138,44 +163,25 @@ h1, h2, h3, .menu {
     font-family: 'MedievalSharp', cursive;
 }
 
-/* Menu Styling */
-nav {
-    background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
-    padding: 10px;
-    border-radius: 5px;
+
+/* Bouton flèche en bas de page */
+
+#myBtn {
+    display: none; /* Bouton caché par défaut */
+    position: fixed; /* Positionné par rapport à la fenêtre d'affichage */
+    bottom: 20px; /* 20px du bas */
+    right: 30px; /* 30px de la droite */
+    z-index: 99; /* S'assure qu'il reste au-dessus des autres éléments */
+    border: none; /* Pas de bordure */
+    outline: none; /* Pas de contour lors de la sélection */
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent noir */
+    color: white; /* Couleur du texte (pour l'icône) */
+    cursor: pointer; /* Style du curseur */
+    padding: 15px; /* Espacement interne */
+    border-radius: 50%; /* Rond */
+    font-size: 18px; /* Taille de l'icône */
 }
 
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-}
-
-nav ul li {
-    margin: 0 10px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-family: 'Cinzel', serif;
-    transition: color 0.3s ease;
-    /* vos styles existants */
-    border-radius: 10px; /* Ceci arrondira les coins. Ajustez la valeur selon vos besoins. */
-    transition: all 0.3s ease; /* Assure une transition douce pour le style de survol */
-}
-
-
-nav ul li a i {
-    margin-right: 8px;
-}
-
-
-nav ul li a:hover {
-    /* vos styles existants pour le survol */
-    background-color: rgba(255, 255, 255, 0.2); /* Ajoute un fond légèrement blanc pour le survol */
-    color: #f8c555; /* Or gold pour le survol */ /* Choisissez une couleur foncée pour plus de contraste */
-    border-radius: 10px; /* S'assurer que les bords arrondis restent cohérents */
-    padding: 14px 16px; /* Ajouter ou ajuster le padding si nécessaire pour l'effet de survol */
+#myBtn:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Fond un peu plus opaque au survol */
 }

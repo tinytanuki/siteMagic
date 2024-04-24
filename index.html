@@ -43,9 +43,10 @@
             <ul>
                 <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
                 <li><a href="Arahbo.html"><i class="fas fa-cat"></i> Arahbo</a></li>
-                <li><a href="Brille-paume.html"><i class="fas fa-star"></i> Brille-Paume</a></li>
-                <li><a href="Nissa.html"><i class="fas fa-leaf"></i> Nissa</a></li>
-                <li><a href="Ajani.html"><i class="fas fa-shield-alt"></i> Ajani</a></li>
+                <li><a href="Brille-Paume.html"><i class="fas fa-star"></i> Brille-paume</a></li>
+                <li><a href="Ajani protecteur valeureux.html"><i class="fas fa-shield-alt"></i> Ajani protecteur valeureux</a></li>
+                <li><a href="Nissa artisane de la nature.html"><i class="fas fa-leaf"></i> Nissa artisane de la nature</a></li>
+                <li><a href="ManaBox_Collection.html"><i class="fas fa-book"></i> Manabox_collection</a></li></ul></nav>
             </ul>
         </nav>
         <div class="cards-container">
@@ -182,6 +183,35 @@
     <div id="popup-img-container" onclick="closePopup()">
         <img id="popup-img" src="" alt="Image agrandie" />
     </div>
-</body>
+    <div id="popup-img-container" onclick="closePopup()">
+        <img id="popup-img" src="" alt="Image agrandie" />
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Retour en haut">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <script>
+    //Quand l'utilisateur scroll vers le bas de 20px depuis le haut du document, afficher le bouton
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+    }
+
+    // Quand l'utilisateur clique sur le bouton, scroll en haut du document
+    function topFunction() {
+    const scrollDuration = 600; // durée du scroll en ms
+    const scrollStep = -window.scrollY / (scrollDuration / 15), // calcule la distance de chaque étape
+        scrollInterval = setInterval(function(){
+        if ( window.scrollY != 0 ) {
+            window.scrollBy( 0, scrollStep );
+        }
+        else clearInterval(scrollInterval); 
+    },15);
+    }
+    </script></body>
 </html>
     
